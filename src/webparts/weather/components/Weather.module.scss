@@ -1,0 +1,32 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.weather {
+
+  .current{
+
+    .location{
+      font-size: 18pt;
+    }
+
+    .temp{
+      font-size: 30pt;
+    }
+
+    .extremes{
+
+      .low{ 
+        font-weight:bold;
+      }
+
+      .high{
+        font-weight:bold;
+      }
+      
+    }
+    .wind{
+      float:left;
+    }
+
+  }
+
+}

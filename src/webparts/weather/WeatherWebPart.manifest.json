@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "fac92cce-9d2e-43dc-b37c-3f4d86600950",
+  "alias": "WeatherWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "Weather" },
+    "description": { "default": "Weather webpart for SPO" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Weather"
+    }
+  }]
+}
