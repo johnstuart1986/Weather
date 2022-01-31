@@ -10,10 +10,14 @@ import WeatherOverview from './WeatherOverview';
 export default class Weather extends React.Component<IWeatherProps, {}> {
   
   public render(): React.ReactElement<IWeatherProps> {
-    return (
-      <div className={styles.weather}>
-        <WeatherOverview serviceProvider={this.props.weatherService} metric={this.props.metric} api={this.props.api} location={this.props.location} colour={this.props.colour}/>
-      </div>
-    );
+    switch(this.props.colour){
+      case("red"):{
+        return (
+          <div className={[styles.weather, styles.red].join(' ')}>
+            <WeatherOverview serviceProvider={this.props.weatherService} metric={this.props.metric} api={this.props.api} location={this.props.location}/>
+          </div>
+        );
+      }
+    }    
   }
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';  
 
-import styles from "../Weather.module.scss";
-import iconStyles from '../../weathericons/sass/weather-icons.scss';
+import styles from "../components/Weather.module.scss";
+import iconStyles from '../weathericons/sass/weather-icons.scss';
 
 import {IComponentProps} from './IComponentProps';
 
@@ -69,13 +69,14 @@ export default class Current extends React.Component<IComponentProps,{}> {
         this.isDay = data.is_day;
         this.condition = data.condition.text;
         this.conditionCode = data.condition.code;
-        this.conditionClass = "wi wi-";
+        this.conditionClass = "wi wi-wapi-";
         if (this.isDay){
-            this.condition += "day-"
+            this.conditionClass += "day-"
         }
         else{
-            this.condition += "night-"
+            this.conditionClass += "night-"
         }
+        this.conditionClass += this.conditionCode;
     }
 
     public render(): React.ReactElement {

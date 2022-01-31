@@ -15,8 +15,8 @@ import * as strings from 'WeatherWebPartStrings';
 
 import Weather from './components/Weather';
 import { IWeatherProps } from './components/IWeatherProps';
-import { WeatherService } from './components/services/WeatherService';
-import { WeatherAPIService } from './components/services/WeatherAPIService';
+import { WeatherService } from './services/WeatherService';
+import { WeatherAPIService } from './services/WeatherAPIService';
 import styles from './components/Weather.module.scss';
 
 export interface IWeatherWebPartProps {

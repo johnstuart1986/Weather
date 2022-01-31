@@ -2,6 +2,11 @@
 
 .weather {
 
+  &.red{
+    background-color: red;
+    color: white;
+  }
+
   .current{
 
     .location{
@@ -31,8 +36,8 @@
 
   .forecast{
 
-    .forecastDay{
-      background-color: red;
+    .forecastDay{ 
+      border-top: 1px solid white;
     }
     
   }

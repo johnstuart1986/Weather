@@ -5,10 +5,10 @@ import { WebPartContext } from '@microsoft/sp-webpart-base';
 
 import styles from './Weather.module.scss';  
 
-import { WeatherService } from './services/WeatherService';
-import Location from './classes/Location';
-import Current from './classes/Current';
-import Forecast from './classes/Forecast';
+import { WeatherService } from '../services/WeatherService';
+import Location from '../classes/Location';
+import Current from '../classes/Current';
+import Forecast from '../classes/Forecast';
 
 export interface IWeatherOverviewProps {  
   serviceProvider: WeatherService;
@@ -16,7 +16,6 @@ export interface IWeatherOverviewProps {
   api:string;
 
   location: string;
-  colour: string;
 }  
 
 export interface IWeatherState {  

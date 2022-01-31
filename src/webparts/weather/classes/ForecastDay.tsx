@@ -1,6 +1,6 @@
 import * as React from 'react';   
 
-import styles from '../Weather.module.scss';
+import styles from '../components/Weather.module.scss';
 
 import {IComponentProps} from './IComponentProps';
 
@@ -28,6 +28,10 @@ export default class ForecastDay extends React.Component<IComponentProps,{}> {
 
   private WindDirClass:string;
   private WindSpeed:number;
+
+  private condition:string;
+  private conditionCode:string;
+  private conditionClass:string;
 
   getToday<T>(type: T, day: number): T[keyof T] {
     const casted = day as keyof T;
@@ -80,15 +84,21 @@ export default class ForecastDay extends React.Component<IComponentProps,{}> {
         this.LowTemp = this.props.data.day.mintemp_f;
         this.WindSpeed = this.props.data.day.maxwind_mph;
     }
+
+    this.condition = this.props.data.day.condition.text;
+    this.conditionCode = this.props.data.day.condition.code;
+    this.conditionClass = "wi wi-wapi-";
+    this.conditionClass += this.conditionCode;
   }
 
   public render(): React.ReactElement {
     return( 
       <React.Fragment>  
-          <div>
+          <div className={styles.forecastDay}>
             <span>
               {this.dayOfWeek}
             </span>
+            <i className={this.conditionClass} ></i>
             {!this.ShowExtremes &&
               <span>
                   {this.AvgTemp}

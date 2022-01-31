@@ -1,4 +1,4 @@
-import { WeatherService } from "./services/WeatherService";
+import { WeatherService } from "../services/WeatherService";
 
 export interface IWeatherProps {  
   api: string;
