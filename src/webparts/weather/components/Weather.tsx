@@ -18,6 +18,13 @@ export default class Weather extends React.Component<IWeatherProps, {}> {
           </div>
         );
       }
+      default:{
+        return (
+          <div className={[styles.weather].join(' ')}>
+            <WeatherOverview serviceProvider={this.props.weatherService} metric={this.props.metric} api={this.props.api} location={this.props.location}/>
+          </div>
+        );
+      }
     }    
   }
 }
