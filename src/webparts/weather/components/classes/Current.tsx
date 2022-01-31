@@ -88,17 +88,17 @@ export default class Current extends React.Component<IComponentProps,{}> {
             {this.ShowExtremes &&
                 <div className={styles.extremes}>
                     <div className={styles.low}>
-                        <span>{this.LowTemp}{this.tempUnitOfMeasure}</span>
+                        <span>Low: {this.LowTemp}{this.tempUnitOfMeasure}</span>
                     </div>
                     <div className={styles.high}>
-                        <span>{this.HighTemp}{this.tempUnitOfMeasure}</span>
+                        <span>High: {this.HighTemp}{this.tempUnitOfMeasure}</span>
                     </div>
                     Show Extremes
                 </div>
             }
             <div className={styles.wind}>
                 <i className={this.WindDirClass}></i>
-                <span>{this.WindSpeed}{this.speedUnitOfMeasure}</span>
+                <span>{this.WindSpeed} {this.speedUnitOfMeasure}</span>
             </div>
           </React.Fragment>
         );

@@ -24,9 +24,16 @@
       
     }
     .wind{
-      float:left;
+      font-weight:bold;
     }
 
   }
 
+  .forecast{
+
+    .forecastDay{
+      background-color: red;
+    }
+    
+  }
 }

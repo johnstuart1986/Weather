@@ -8,6 +8,7 @@ import styles from './Weather.module.scss';
 import { WeatherService } from './services/WeatherService';
 import Location from './classes/Location';
 import Current from './classes/Current';
+import Forecast from './classes/Forecast';
 
 export interface IWeatherOverviewProps {  
   serviceProvider: WeatherService;
@@ -43,7 +44,7 @@ export default class WeatherOverview extends React.Component<IWeatherOverviewPro
                   <Location data={this.state.data.location} metric={this.props.metric} api={this.props.api}/>
                   <Current data={this.state.data.current} metric={this.props.metric} api={this.props.api}/>
                 </div>
-
+                <Forecast data={this.state.data.forecast} metric={this.props.metric} api={this.props.api}/>
             </React.Fragment>  
         );  
       }
