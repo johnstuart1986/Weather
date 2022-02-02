@@ -13,11 +13,13 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'WeatherWebPartStrings';
 
+import "./weathericons/sass/weather-icons.scss"
+import "./weathericons/sass/weather-icons-wind.scss"
+
 import Weather from './components/Weather';
 import { IWeatherProps } from './components/IWeatherProps';
 import { WeatherService } from './services/WeatherService';
 import { WeatherAPIService } from './services/WeatherAPIService';
-import styles from './components/Weather.module.scss';
 
 export interface IWeatherWebPartProps {
   api: string;

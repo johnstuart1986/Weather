@@ -17,7 +17,7 @@
     "description": { "default": "Weather webpart for SPO" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Weather"
+      "colour": "red"
     }
   }]
 }

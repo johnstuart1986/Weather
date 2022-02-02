@@ -1,9 +1,8 @@
 import * as React from 'react';  
 
 import styles from "../components/Weather.module.scss";
-import iconStyles from '../weathericons/sass/weather-icons.scss';
 
-import {IComponentProps} from './IComponentProps';
+import {IComponentProps} from './IComponentProps'; 
 
 export default class Current extends React.Component<IComponentProps,{}> {  
     private tempUnitOfMeasure:string;
@@ -81,7 +80,7 @@ export default class Current extends React.Component<IComponentProps,{}> {
 
     public render(): React.ReactElement {
         return( 
-          <React.Fragment>  
+          <React.Fragment>
             <i className={this.conditionClass} ></i>
             <div className={styles.temp}>
                 <span>{this.CurrentTemp}{this.tempUnitOfMeasure}</span>

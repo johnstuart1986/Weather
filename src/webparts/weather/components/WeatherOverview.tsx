@@ -16,6 +16,7 @@ export interface IWeatherOverviewProps {
   api:string;
 
   location: string;
+  colour:string;
 }  
 
 export interface IWeatherState {  
@@ -39,11 +40,13 @@ export default class WeatherOverview extends React.Component<IWeatherOverviewPro
       {
         return(  
             <React.Fragment>  
+              <div className={this.props.colour}> 
                 <div className={styles.current}> 
                   <Location data={this.state.data.location} metric={this.props.metric} api={this.props.api}/>
                   <Current data={this.state.data.current} metric={this.props.metric} api={this.props.api}/>
                 </div>
                 <Forecast data={this.state.data.forecast} metric={this.props.metric} api={this.props.api}/>
+              </div>
             </React.Fragment>  
         );  
       }

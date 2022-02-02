@@ -2,9 +2,12 @@
 
 .weather {
 
-  &.red{
-    background-color: red;
-    color: white;
+   :global{
+     
+    .red{
+      background-color: red;
+      color: white;
+    }
   }
 
   .current{
