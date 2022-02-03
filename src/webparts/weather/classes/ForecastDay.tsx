@@ -1,7 +1,7 @@
 import * as React from 'react';   
 
 import styles from '../components/Weather.module.scss';
-import iconStyles from '../weathericons/sass/weather-icons.scss';
+import iconStyles from '../assets/weathericons/sass/weather-icons.scss';
 
 import {IComponentProps} from './IComponentProps';
 

@@ -2,6 +2,9 @@ import * as React from 'react';
 
 import { escape } from '@microsoft/sp-lodash-subset';
 
+import "./assets/weathericons/sass/weather-icons.scss"
+import "./assets/weathericons/sass/weather-icons-wind.scss"
+
 import styles from './Weather.module.scss';
 
 import { IWeatherProps } from './IWeatherProps';
