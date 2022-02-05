@@ -2,13 +2,15 @@ import * as React from 'react';
 
 import { escape } from '@microsoft/sp-lodash-subset';  
 import { WebPartContext } from '@microsoft/sp-webpart-base';  
+import { SPComponentLoader } from '@microsoft/sp-loader';
 
-import styles from './Weather.module.scss';  
+import styles from "../assets/sass/Weather.module.scss";
+import "../assets/css/weathericons/wi-weatherapi.css";
 
 import { WeatherService } from '../services/WeatherService';
-import Location from '../classes/Location';
-import Current from '../classes/Current';
-import Forecast from '../classes/Forecast';
+import Location from './Location';
+import Current from './Current';
+import Forecast from './Forecast';
 
 export interface IWeatherOverviewProps {  
   serviceProvider: WeatherService;
@@ -35,6 +37,9 @@ export default class WeatherOverview extends React.Component<IWeatherOverviewPro
     }  
 
     public render(): React.ReactElement {  
+    
+      SPComponentLoader.loadCss('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css');
+      SPComponentLoader.loadCss('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons-wind.min.css');
 
       if(this.state.data != null)
       {

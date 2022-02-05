@@ -1,6 +1,6 @@
 import * as React from 'react';  
 
-import styles from "../components/Weather.module.scss";
+import styles from "../assets/sass/Weather.module.scss";
 
 import {IComponentProps} from './IComponentProps'; 
 
@@ -53,7 +53,7 @@ export default class Current extends React.Component<IComponentProps,{}> {
         this.HighTemp = 0;
         this.LowTemp = 0;
         this.WindDir = data.wind_degree;
-        this.WindDirClass = "wi wi-towards-" + this.WindDir + "-deg";
+        this.WindDirClass = "wi wi-wind towards-" + this.WindDir + "-deg";
 
         if(this.props.metric)
         {
@@ -70,10 +70,10 @@ export default class Current extends React.Component<IComponentProps,{}> {
         this.conditionCode = data.condition.code;
         this.conditionClass = "wi wi-wapi-";
         if (this.isDay){
-            this.conditionClass += "day-"
+            this.conditionClass += "day-";
         }
         else{
-            this.conditionClass += "night-"
+            this.conditionClass += "night-";
         }
         this.conditionClass += this.conditionCode;
     }

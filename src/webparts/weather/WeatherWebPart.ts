@@ -47,8 +47,8 @@ export default class WeatherWebPart extends BaseClientSideWebPart<IWeatherWebPar
         break;
       }
     }
-
-    return Promise.resolve();
+    
+    return super.onInit();
   }
 
   public render(): void {

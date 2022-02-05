@@ -1,7 +1,6 @@
 import * as React from 'react';   
 
-import styles from '../components/Weather.module.scss';
-import iconStyles from '../assets/weathericons/sass/weather-icons.scss';
+import styles from "../assets/sass/Weather.module.scss";
 
 import {IComponentProps} from './IComponentProps';
 
@@ -34,7 +33,7 @@ export default class ForecastDay extends React.Component<IComponentProps,{}> {
   private conditionCode:string;
   private conditionClass:string;
 
-  getToday<T>(type: T, day: number): T[keyof T] {
+  private getToday<T>(type: T, day: number): T[keyof T] {
     const casted = day as keyof T;
     return type[casted];
   }
@@ -70,7 +69,7 @@ export default class ForecastDay extends React.Component<IComponentProps,{}> {
 
     this.ShowExtremes = true;
 
-    this.WindDirClass = "wi wi-towards-" + this.props.data.hour.wind_degree + "-deg";
+    this.WindDirClass = "wi wi-wind towards-" + this.props.data.hour.wind_degree + "-deg";
 
     if(this.props.metric)
     {

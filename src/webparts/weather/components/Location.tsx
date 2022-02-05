@@ -1,6 +1,6 @@
 import * as React from 'react';   
 
-import styles from '../components/Weather.module.scss';
+import styles from "../assets/sass/Weather.module.scss";
 
 import {IComponentProps} from './IComponentProps';
 

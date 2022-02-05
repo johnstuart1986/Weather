@@ -1,17 +1,18 @@
 import * as React from 'react';
 
+
 import { escape } from '@microsoft/sp-lodash-subset';
 
-import "./assets/weathericons/sass/weather-icons.scss"
-import "./assets/weathericons/sass/weather-icons-wind.scss"
+//import "../assets/css/weathericons/weather-icons.css"
+//import "../assets/css/weathericons/weather-icons-wind.css"
 
-import styles from './Weather.module.scss';
+import styles from "../assets/sass/Weather.module.scss";
 
 import { IWeatherProps } from './IWeatherProps';
 import WeatherOverview from './WeatherOverview';
 
 export default class Weather extends React.Component<IWeatherProps, {}> {
-  
+    
   public render(): React.ReactElement<IWeatherProps> {
     return (
       <div className={[styles.weather].join(' ')}>
