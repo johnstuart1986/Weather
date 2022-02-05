@@ -141,7 +141,11 @@ export default class WeatherWebPart extends BaseClientSideWebPart<IWeatherWebPar
                   label: strings.ColourLabel, 
                   disabled: false,
                   options: [
-                    { key: 'red', text: 'Red' }
+                    { key: 'red', text: 'Red' },
+                    { key: 'orange', text: 'Orange' },
+                    { key: 'yellow', text: 'Yellow' },
+                    { key: 'green', text: 'Green' },
+                    { key: 'black', text: 'Black' }
                   ],
                   selectedKey: 'red'
                 }),

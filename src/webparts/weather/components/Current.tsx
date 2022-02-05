@@ -81,7 +81,7 @@ export default class Current extends React.Component<IComponentProps,{}> {
     public render(): React.ReactElement {
         return( 
           <React.Fragment>
-            <i className={this.conditionClass} ></i>
+            <i className={[styles.condition, this.conditionClass].join(' ')} ></i>
             <div className={styles.temp}>
                 <span>{this.CurrentTemp}{this.tempUnitOfMeasure}</span>
             </div>

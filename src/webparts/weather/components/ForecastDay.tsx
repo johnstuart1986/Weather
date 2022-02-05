@@ -95,28 +95,34 @@ export default class ForecastDay extends React.Component<IComponentProps,{}> {
     return( 
       <React.Fragment>  
           <div className={styles.forecastDay}>
-            <span>
-              {this.dayOfWeek}
-            </span>
-            <i className={this.conditionClass} ></i>
-            {!this.ShowExtremes &&
-              <span>
-                  {this.AvgTemp}
+            <div className={styles.dayWrapper}>
+              <span className={styles.day}>
+                {this.dayOfWeek}
               </span>
-            }
-            {this.ShowExtremes &&
-              <div className={styles.extremes}>
-                  <div className={styles.low}>
-                      <span>Low: {this.LowTemp}{this.tempUnitOfMeasure}</span>
-                  </div>
-                  <div className={styles.high}>
-                      <span>High: {this.HighTemp}{this.tempUnitOfMeasure}</span>
-                  </div>
+            </div>
+            <i className={[styles.condition, this.conditionClass].join(' ')}></i>
+            <div className={styles.details}>
+              {!this.ShowExtremes &&
+                <div className={styles.extremes}>
+                  <span>
+                      {this.AvgTemp}
+                  </span>
+                </div>
+              }
+              {this.ShowExtremes &&
+                <div className={styles.extremes}>
+                    <div className={styles.low}>
+                        <span>Low: {this.LowTemp}{this.tempUnitOfMeasure}</span>
+                    </div>
+                    <div className={styles.high}>
+                        <span>High: {this.HighTemp}{this.tempUnitOfMeasure}</span>
+                    </div>
+                </div>
+              }
+              <div className={styles.wind}>
+                  <i className={this.WindDirClass}></i>
+                  <span>{this.WindSpeed} {this.speedUnitOfMeasure}</span>
               </div>
-            }
-            <div>
-                <i className={this.WindDirClass}></i>
-                <span>{this.WindSpeed} {this.speedUnitOfMeasure}</span>
             </div>
           </div>
       </React.Fragment>
